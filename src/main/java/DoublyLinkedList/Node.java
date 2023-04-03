@@ -2,8 +2,8 @@ package DoublyLinkedList;
 
 class Node<T> {
     private T data;
-    private Node previous;
-    private Node next;
+    private Node<T> previous;
+    private Node<T> next;
 
     Node(T data) {
         this.data = data;
@@ -33,5 +33,12 @@ class Node<T> {
 
     void setNext(Node next) {
         this.next = next;
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "data=" + data +
+                '}';
     }
 }

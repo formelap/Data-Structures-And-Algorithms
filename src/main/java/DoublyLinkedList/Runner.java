@@ -4,12 +4,23 @@ public class Runner {
     public static void main(String[] args) {
         DoublyLinkedList<Integer> dll = new DoublyLinkedList<Integer>();
 
-        dll.addFirst(2);
-        dll.addFirst(1);
+        dll.add(0,1);
+        dll.addFirst(0);
+        dll.addLast(3);
         dll.addLast(4);
-        dll.add(0, 0);
-        dll.add(3, 3);
-        dll.add(5,5);
+        dll.add(2,2);
+
+        dll.print();
+        System.out.println("Size: " + dll.size());
+
+        System.out.println(dll.getFirst() == 0);
+        System.out.println(dll.getLast() == 4);
+        System.out.println(dll.get(2) == 2);
+
+        dll.remove(2);
+        dll.removeFirst();
+        dll.removeLast();
+
         dll.print();
         System.out.println("Size: " + dll.size());
 
